@@ -8,7 +8,7 @@ First user to get three spaces in a row/column or diagonally wins!
 On pressing 2, a LEADERBOARD will be shown of the users played on a particular system, after which users can enter the gaming area on pressing 1 or by pressing any other key, they can end the game and come back later.
 
 
-All the high level requirements are implemented using functions.
+                    All the high level requirements are implemented using functions.
                     1.) startGame();
                     2.) display();
                     3.) p1();
