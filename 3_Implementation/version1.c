@@ -1,211 +1,248 @@
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-char x,o;
-char a[9]={'1','2','3','4','5','6','7','8','9'};
-char u1[50],u2[50];
-void board();
-void rules();
-int checkforwin();
-int main()
-{
-    FILE *p;
-    p=fopen("score.txt","a+");
-    fclose(p);
-    system("color 09");
-    int player=1;
-    int choice,score=-1;
-    char symbol,re;
-    char start,dec;
-    int s;
-    rules();
-    printf("\n\nType 1 to start the game:-\nType 2 to view leader board:-\n");
-    scanf("%d",&s);
-    if(s==1)
-    {
-    read:
-        p=fopen("score.txt","a+");
-    printf("\nEnter name of player1: ");
-    scanf("%s",u1);
-    fprintf(p,"\n%s",u1);
-    printf("Enter name of player2: ");
-    scanf("%s",u2);
-    fprintf(p,"\t%s",u2);
-    fclose(p);
-    if(!strcmp(u1,u2))
-    {
-        printf("Enter names of different players!\n\n");
-        goto read;
+char matrix[3][3];              // 3x3 2D array
+
+int end = 0;                    // counter for game's over
+int moves = 0;                  // counter for number of turns to determine a draw
+
+char input;                     // user input (X or O)
+
+void startGame();
+void display();
+void p1();
+void p2();
+char check();
+void intro();
+
+int main() {
+    
+    char enter = ' ';           // enter key to play
+    char rematch = ' ';         // rematch input (y/n)
+    char result = ' ';
+    
+    startGame();
+    
+    system("clear");            // typing "clear" in the console (so that it is not cluttered)
+    
+    printf("===========\n");
+    printf("Tic-Tac-Toe\n");
+    printf("===========\n\n");
+    
+    printf("Player 1) X\n");
+    printf("Player 2) O\n\n");
+    
+    printf("Press [Enter] to begin!\n");
+    scanf("%c", &enter);
+    
+    system("clear");
+    
+    // loop until the game ends (when someone wins or it's a tie)
+    
+    while (end == 0) {
+        
+        display();              // refreshes the display
+        p1();                   // player 1
+        moves++;
+        
+        if (moves == 9)
+            break;
+        
+        result = check();
+        
+        if (result != ' ')
+            break;
+        
+        display();              // refreshes the display
+        p2();                   // player 2
+        moves++;
+        
+        if (moves == 9)
+            break;
+        
+        result = check();
+        
+        if (result != ' ')
+            break;
+        
     }
-    else
-        decision();
+    
+    // ===============================================================================
+    
+    char ans = check();
 
-
-    system("color fc");
-    board();
-
-    do
-    {
-
-        player=((player%2)?1:2);
-        if(player==1)
-        printf("%s Type any digit from 1-9 to fill your response:- ",u1);
-        else
-            printf("%s Type any digit from 1-9 to fill your response:- ",u2);
-        scanf("%d",&choice);
-        symbol=((player==1)?x:o);
-        if(choice==1 && a[0]=='1')
-            a[0]=symbol;
-        else if(choice==2 && a[1]=='2')
-            a[1]=symbol;
-        else if(choice==3 && a[2]=='3')
-            a[2]=symbol;
-        else if(choice==4 && a[3]=='4')
-            a[3]=symbol;
-        else if(choice==5 && a[4]=='5')
-            a[4]=symbol;
-        else if(choice==6 && a[5]=='6')
-            a[5]=symbol;
-        else if(choice==7 && a[6]=='7')
-            a[6]=symbol;
-        else if(choice==8 && a[7]=='8')
-            a[7]=symbol;
-        else if(choice==9 && a[8]=='9')
-            a[8]=symbol;
-        else
-            {printf("Wrong Selection\n");player--;}
-
-        score=checkforwin();
-        player++;
-        board();
-    }while(score == -1);
-
-
-    p=fopen("score.txt","a+");
-    if(score==1)
-    {
-
-        if(player==2)
-        {printf("\n\nPlayer1 %s Wins!\n\n",u1);fprintf(p,"\t%s",u1);
-        getch();}
-        else
-            {printf("\n\nPlayer2 %s Wins!\n\n",u2);fprintf(p,"\t%s",u2);
-        getch();
-            }
-        fclose(p);
+    display();
+    
+    if (ans == 'X') {
+        
+        printf("Player 1: X won!\n\n");
+        
     }
-    else
-        printf("\n\nGame Draws!\n\n");fprintf(p,"\t%s","DRAW");
-        getch();
+    else if (ans == 'O') {
+        
+        printf("Player 2: O won!\n\n");
+        
     }
-    if(s==2)
-    {
-        int cho;
-        system("cls");
-        printf("\n\n");
-        printf("\tLEADERBOARD\n\n");
-        char c;
-        p=fopen("score.txt","r");
-        while((c=getc(p))!=EOF)
-        {
-            printf("%c",c);
+    else {
+        
+        printf("It's a Tie Game!\n\n");
+        
+        printf("Want a rematch (y/n)? ");
+        scanf("%c", &rematch);
+        scanf("%c", &rematch);
+        
+        if (rematch == 'y' || rematch == 'Y') {
+            
+            main();
+            
         }
-        fclose(p);
-        printf("\n\nPress 1 to start the game:- ");
-        scanf("%d",&cho);
-        if(cho==1)
-            goto read;
-        else
-            getch();
+        else {
+            
+            printf("\n");
+        }
+        
     }
-    else
-    {
-        printf("\n\nShould have typed 1 to play the game!\nHope to see you back soon!\n\n");
-        getch();
-    }
-}
-int checkforwin()
-{
-    if(a[0]==a[1] && a[1]==a[2])
-        return 1;
-    else if(a[3]==a[4] && a[4]==a[5])
-        return 1;
-    else if(a[6]==a[7] && a[7]==a[8])
-        return 1;
-    else if(a[0]==a[3] && a[3]==a[6])
-        return 1;
-    else if(a[1]==a[4] && a[4]==a[7])
-        return 1;
-    else if(a[2]==a[5] && a[5]==a[8])
-        return 1;
-    else if(a[0]==a[4] && a[4]==a[8])
-        return 1;
-    else if(a[2]==a[4] && a[4]==a[6])
-        return 1;
-    else if(a[0]!='1' && a[1]!='2' && a[2]!='3' && a[3]!='4' && a[4]!='5' && a[5]!='6' && a[6]!='7' && a[7]!='8' && a[8]!='9')
-        return 0;
-    else
-        return -1;
+    
+    printf("Thanks for playing!\n\n");
+    
+    return 0;
+    
 }
 
-void board()
-{
+// initializes the 2D array
+
+void startGame() {
+    
+    int i, j;
+    
+    for (i = 0; i < 3; i++) {
+        
+        for (j = 0; j < 3; j++) {
+            
+            matrix[i][j] = ' ';
+            
+        }
+        
+    }
+    
+}
+
+// prints out the display
+
+void display() {
+    
     int i;
-
-    system("cls");
-    printf("\tTic-Tac-Toe\n\n");
-        printf("\n\n");
-        printf("%s:- (%c)\n%s:-  (%c)\n\n\n",u1,x,u2,o);
-
-        printf("  %c |  %c | %c\n",a[0],a[1],a[2]);
-        printf("    |    |    \n");
-        printf("----|----|----\n");
-        printf("    |    |    \n");
-        printf("  %c |  %c | %c\n",a[3],a[4],a[5]);
-        printf("    |    |    \n");
-        printf("----|----|----\n");
-        printf("  %c |  %c | %c\n",a[6],a[7],a[8]);
-        printf("    |    |    \n");
-    }
-void rules()
-{
-    char link;
-    printf("\tTic-Tac-Toe\n\n");
-    printf("Welcome to the most played 2D game and a sort of fun using X and O\n\n");
-    printf("Rules:-\n");
-    printf("\n1:Each player will be entering the number to put respective X or O in the desired position");
-    printf("\n2:Player who gets a combination of 3 same characters either diagonal or horizontally or \n  vertically will be declared as the winner");
-    printf("\n\nEnjoy the game! Be a Winner!\n\n");
-    printf("For more clarifications press Y else type any other character:- ");
-    scanf("%c",&link);
-    if(link=='y' || link=='Y')
-    {
-        system("start http://www.wikihow.com/Play-Tic-Tac-Toe");
-    }
-
-}
-int decision()
-{
-    char dec;
-        deci:
-        printf("\n\nPlayer1 %s choose the X or 0:",u1);
-        dec=getchar();
-        scanf("%c",&dec);
-        {
-            if(dec=='X' || dec=='x')
-            {
-                x='X';
-                o='0';
-            }
-            else if(dec=='0')
-            {
-                x='0';
-                o='X';
-            }
-            else
-            {
-                printf("Please enter either X or 0 only \n\n");
-                goto deci;
-            }
+    
+    system("clear");
+    
+    printf("===========\n");
+    printf("Tic-Tac-Toe\n");
+    printf("===========\n\n");
+    
+    for (i = 0; i < 3; i++) {
+        
+        printf(" %c | %c | %c ", matrix[i][0], matrix[i][1], matrix[i][2]);
+        
+        if (i != 2) {
+            
+            printf("\n---|---|---\n");
+            
         }
+        
+    }
+    
+    printf("\n\n");
+    
+}
+
+// player one
+
+void p1() {
+    
+    int x, y;
+    
+    printf("P1) Enter coordinates: ");
+    scanf("%d %d", &x, &y);
+    
+    // decrement by 1 (if they input 3, it will be index 2)
+    
+    x--;
+    y--;
+    
+    // check for nonempty
+    
+    if (matrix[x][y] != ' ') {
+        
+        printf("\nInvalid entry, try again.\n\n");
+        p1();
+        
+    }
+    else {
+        
+        matrix[x][y] = 'X';
+        
+    }
+    
+}
+
+// player two
+
+void p2() {
+    
+    int x, y;
+    
+    printf("P2) Enter coordinates: ");
+    scanf("%d %d", &x, &y);
+    
+    x--;
+    y--;
+    
+    if (matrix[x][y] != ' ') {
+        
+        printf("\nInvalid entry, try again.\n\n");
+        p2();
+        
+    }
+    else {
+        
+        matrix[x][y] = 'O';
+        
+    }
+    
+}
+
+// check for a win (return the letter if there is a win)
+
+char check() {
+    
+    int i;
+    
+    for (i = 0; i < 3; i++) {
+    
+        // check rows
+        
+        if (matrix[i][0] == matrix[i][1] && matrix[i][0] == matrix[i][2])
+            return matrix[i][0];
+        
+        // check columns
+        
+        if (matrix[0][i] == matrix[1][i] && matrix[0][i] == matrix[2][i])
+            return matrix[0][i];
+    
+    }
+
+    // check diagonal 1
+    
+    if (matrix[0][0] == matrix[1][1] && matrix[1][1] == matrix[2][2])
+        return matrix[0][0];
+        
+    // check diagonal 2
+    
+    if (matrix[0][2] == matrix[1][1] && matrix[1][1] == matrix[2][0])
+        return matrix[0][2];
+    
+    // if everything else doesn't work, then it returns nothing, meaning the game goes on
+    
+    return ' ';
+    
 }
