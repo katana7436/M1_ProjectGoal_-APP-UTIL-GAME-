@@ -7,12 +7,12 @@ These are the features of my project:   * Initializes the game using a button
 
 # Low Level Requirements of this Project
   All the high level requirements are implemented using functions.
-                                        * void startGame();
-                                        * display();
-                                        * p1();
-                                        * p2();
-                                        * check();
-                                        * intro();
+                                    * void startGame();
+                                    * display();
+                                    * p1();
+                                    * p2();
+                                    * check();
+                                    * intro();
 
 ## SYSTEM REQUIREMENT:
                      This section describes the hardware components and software requirements of this mini project:-
