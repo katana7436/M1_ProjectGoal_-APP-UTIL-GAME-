@@ -1,18 +1,19 @@
 # High level requirements
 
-These are the features of my project:   * Initializes the game using a button
-                                        * 2 players play alternatively 
-                                        * refreshes the display after each turn
-                                        * Displays the winner at the end
+These are the features of my project:   
+                * Initializes the game using a button
+                * 2 players play alternatively 
+                * refreshes the display after each turn
+                * Displays the winner at the end
 
 # Low Level Requirements of this Project
   All the high level requirements are implemented using functions.
-                                    * void startGame();
-                                    * display();
-                                    * p1();
-                                    * p2();
-                                    * check();
-                                    * intro();
+                * void startGame();
+                * display();
+                * p1();
+                * p2();
+                * check();
+                * intro();
 
 ## SYSTEM REQUIREMENT:
                      This section describes the hardware components and software requirements of this mini project:-
