@@ -1,4 +1,4 @@
-#TIC TAC TOE
+# TIC TAC TOE
 
 
 Tic-Tac-Toe 2-player game( C programmed) using basic C functions.

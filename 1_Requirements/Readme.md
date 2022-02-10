@@ -4,10 +4,11 @@
                     2.) 2 players play alternatively 
                     3.) refreshes the display after each turn
                     4.) Displays the winner at the end
+                    5.) shows Leaderboard
 
 # Low Level Requirements of this Project
                 All the high level requirements are implemented using functions.
-                    1.) void startGame();
+                    1.) startGame();
                     2.) display();
                     3.) p1();
                     4.) p2();
