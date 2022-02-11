@@ -1,5 +1,6 @@
 # TIC TAC TOE
 
+![code quality badge](https://api.codiga.io/project/31169/status/svg)
 ![code quality score](https://api.codiga.io/project/31169/score/svg)
 
 
