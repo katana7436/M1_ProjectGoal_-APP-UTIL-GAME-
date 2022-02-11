@@ -1,5 +1,7 @@
 # TIC TAC TOE
 
+![Code quality status](https://api.codiga.io/project/31169/status/svg)
+![Code quality badge](https://api.codiga.io/project/31169/score/svg)
 
 Tic-Tac-Toe 2-player game( C programmed) using basic C functions.
 User can now know more rules by pressing y/Y which will be redirected to link
