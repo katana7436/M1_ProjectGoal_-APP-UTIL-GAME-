@@ -31,4 +31,5 @@ Technologies Used visual studio code  and  c programming  language  are  used  t
 
 
 # Swot Analysis:
-![swot](https://user-images.githubusercontent.com/64160088/153545755-68c62b34-6bad-4bae-8d40-351e641148c3.png)
+![swot](https://user-images.githubusercontent.com/64160088/153546027-996e76de-f9b9-4689-89d1-3931a9189077.png)
+
