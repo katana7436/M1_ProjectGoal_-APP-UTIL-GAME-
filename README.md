@@ -1,5 +1,7 @@
 # TIC TAC TOE
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3f22382b26c445ab92e6fcd2f7cea4bb)](https://app.codacy.com/gh/katana7436/M1_TicTacToe_GAME?utm_source=github.com&utm_medium=referral&utm_content=katana7436/M1_TicTacToe_GAME&utm_campaign=Badge_Grade_Settings)
+
 ![Code quality status](https://api.codiga.io/project/31169/status/svg)
 ![Code quality badge](https://api.codiga.io/project/31169/score/svg)
 
