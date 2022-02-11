@@ -2,6 +2,7 @@
 
 ![Code quality status](https://api.codiga.io/project/31169/status/svg)
 ![Code quality badge](https://api.codiga.io/project/31169/score/svg)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/5ddf8efdd4f6407ead5bb799a8c2ab90)](https://www.codacy.com/gh/katana7436/M1_TicTacToe_GAME/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=katana7436/M1_TicTacToe_GAME&amp;utm_campaign=Badge_Grade)
 
 Tic-Tac-Toe 2-player game( C programmed) using basic C functions.
 User can now know more rules by pressing y/Y which will be redirected to link
