@@ -1,12 +1,15 @@
+// Team $20 Gift Card
+// Brandon Lim & Jack Lu
+
 #include <stdio.h>
 #include <stdlib.h>
 
-char matrix[3][3];            
+char matrix[3][3];              // 3x3 2D array
 
-int end = 0;                   
-int moves = 0;                  
+int end = 0;                    // counter for game's over
+int moves = 0;                  // counter for number of turns to determine a draw
 
-char input;                     
+char input;                     // user input (X or O)
 
 void startGame();
 void display();
@@ -17,13 +20,13 @@ void intro();
 
 int main() {
     
-    char enter = ' ';           
-    char rematch = ' ';        
+    char enter = ' ';           // enter key to play
+    char rematch = ' ';         // rematch input (y/n)
     char result = ' ';
     
     startGame();
     
-    system("clear");           
+    system("clear");            // typing "clear" in the console (so that it is not cluttered)
     
     printf("===========\n");
     printf("Tic-Tac-Toe\n");
@@ -37,11 +40,12 @@ int main() {
     
     system("clear");
     
+    // loop until the game ends (when someone wins or it's a tie)
     
     while (end == 0) {
         
-        display();             
-        p1();                
+        display();              // refreshes the display
+        p1();                   // player 1
         moves++;
         
         if (moves == 9)
@@ -52,8 +56,8 @@ int main() {
         if (result != ' ')
             break;
         
-        display();           
-        p2();                   
+        display();              // refreshes the display
+        p2();                   // player 2
         moves++;
         
         if (moves == 9)
@@ -108,7 +112,7 @@ int main() {
     
 }
 
-
+// initializes the 2D array
 
 void startGame() {
     
@@ -126,7 +130,7 @@ void startGame() {
     
 }
 
-
+// prints out the display
 
 void display() {
     
@@ -163,12 +167,12 @@ void p1() {
     printf("P1) Enter coordinates: ");
     scanf("%d %d", &x, &y);
     
-  
+    // decrement by 1 (if they input 3, it will be index 2)
     
     x--;
     y--;
     
-   
+    // check for nonempty
     
     if (matrix[x][y] != ' ') {
         
@@ -210,7 +214,7 @@ void p2() {
     
 }
 
-
+// check for a win (return the letter if there is a win)
 
 char check() {
     
@@ -218,30 +222,42 @@ char check() {
     
     for (i = 0; i < 3; i++) {
     
-        
+        // check rows
         
         if (matrix[i][0] == matrix[i][1] && matrix[i][0] == matrix[i][2])
             return matrix[i][0];
         
-      
+        // check columns
         
         if (matrix[0][i] == matrix[1][i] && matrix[0][i] == matrix[2][i])
             return matrix[0][i];
     
     }
 
-   
+    // check diagonal 1
     
     if (matrix[0][0] == matrix[1][1] && matrix[1][1] == matrix[2][2])
         return matrix[0][0];
         
-    
+    // check diagonal 2
     
     if (matrix[0][2] == matrix[1][1] && matrix[1][1] == matrix[2][0])
         return matrix[0][2];
     
-    
+    // if everything else doesn't work, then it returns nothing, meaning the game goes on
     
     return ' ';
     
 }
+
+/*
+ 
+  printf("Coordinates:\n\n");
+ 
+  printf("      1 1|1 2|1 3\n");
+  printf("      ---|---|---\n");
+  printf("      2 1|2 2|2 3\n");
+  printf("      ---|---|---\n");
+  printf("      3 1|3 2|3 3\n\n");
+
+*/
