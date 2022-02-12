@@ -1,4 +1,4 @@
-
+//Aman Sharma
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -150,4 +150,5 @@ char examin() {
     if (matrix[0][2] == matrix[1][1] && matrix[1][1] == matrix[2][0])
         return matrix[0][2];
     return ' ';
+
 }
