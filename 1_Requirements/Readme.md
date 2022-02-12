@@ -33,3 +33,18 @@ Technologies Used visual studio code  and  c programming  language  are  used  t
 # Swot Analysis:
 ![swot](https://user-images.githubusercontent.com/64160088/153546027-996e76de-f9b9-4689-89d1-3931a9189077.png)
 
+# 4W's 1H
+## WHO
+Any user can play this game.
+
+## WHAT
+Tic-tac-toe is a simple game is played on a grid that's 3 squares by 3 squares
+
+## WHEN
+Tic-tac-toe is a fun game that you can play any time
+
+## WHERE
+This game can played anywhere in a computer or even using a paper and pen.
+
+## HOW
+The game is played on a grid that's 3 squares by 3 squares. Then you can choose whether you are use 'X' or '0' First player who gets the 3 marks in a row (up, down, across, or diagonally) will be the winner of the game.
