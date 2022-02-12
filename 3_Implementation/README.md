@@ -9,9 +9,9 @@ On pressing 2, a LEADERBOARD will be shown of the users played on a particular s
 
 
                     All the high level requirements are implemented using functions.
-                    1.) startGame();
-                    2.) display();
-                    3.) p1();
-                    4.) p2();
-                    5.) check();
+                    1.) begin();
+                    2.) showgrid();
+                    3.) player1();
+                    4.) player2();
+                    5.) examin();
                     6.) intro();
