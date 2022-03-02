@@ -5,4 +5,4 @@ Tic tac toe is a game with a finite amount of possible grid positions and finite
 Source: http://ibmathsresources.com/2013/11/24/game-theory-and-tic-tac-toe/
 
 
-code ref:  https://github.com/iswaryadhanapalan
+code ref:  Swarya Dhanapalan 
