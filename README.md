@@ -3,6 +3,10 @@
 ## INTRODUCTION
 * ***This game is very popular and is fairly simple by itself. It is actually a two player game. In this game, there is a board with n x n squares. In our game, it is 3 x 3 squares.*** 
 # BADGES
+
+[![Code Quality - Static Code - Cppcheck](https://github.com/katana7436/M1_Tictactoe_Game/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/katana7436/M1_Tictactoe_Game/actions/workflows/cppcheck.yml)
+[![Git Inspector](https://github.com/katana7436/M1_Tictactoe_Game/actions/workflows/Git_inspector.yml/badge.svg)](https://github.com/katana7436/M1_Tictactoe_Game/actions/workflows/Git_inspector.yml)
+[![Unit Testing - Unity](https://github.com/katana7436/M1_Tictactoe_Game/actions/workflows/unity.yml/badge.svg)](https://github.com/katana7436/M1_Tictactoe_Game/actions/workflows/unity.yml)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/5ddf8efdd4f6407ead5bb799a8c2ab90)](https://www.codacy.com/gh/katana7436/M1_TicTacToe_GAME/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=katana7436/M1_TicTacToe_GAME&amp;utm_campaign=Badge_Grade)
 
 * ***Play with 'X' or 'O'***
