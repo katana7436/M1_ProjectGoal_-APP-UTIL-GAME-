@@ -1,29 +1,26 @@
-# TIC TAC TOE
 
-# Badge
+# ***TIC-TAC-TOE***
+## INTRODUCTION
+* ***This game is very popular and is fairly simple by itself. It is actually a two player game. In this game, there is a board with n x n squares. In our game, it is 3 x 3 squares.*** 
+# BADGES
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/5ddf8efdd4f6407ead5bb799a8c2ab90)](https://www.codacy.com/gh/katana7436/M1_TicTacToe_GAME/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=katana7436/M1_TicTacToe_GAME&amp;utm_campaign=Badge_Grade)
 
-# Introduction
-
-Tic-Tac-Toe 2-player game( C programmed) using basic C functions.
-User can now know more rules by pressing y/Y which will be redirected to link
-User will get two options to either start game or view the LeaderBoard.
-On pressing 1, users can enter their usernames,afterwhich player1 will be allowed to choose X or 0 and then the users enter the gaming area to make moves using numeric keypad.
-First user to get three spaces in a row/column or diagonally wins!
-On pressing 2, a LEADERBOARD will be shown of the users played on a particular system, after which users can enter the gaming area on pressing 1 or by pressing any other key, they can end the game and come back later.
-
-# 4W's 1H
-## WHO
-Any user can play this game.
-
-## WHAT
-Tic-tac-toe is a simple game is played on a grid that's 3 squares by 3 squares
-
-## WHEN
-Tic-tac-toe is a fun game that you can play any time
-
-## WHERE
-This game can played anywhere in a computer or even using a paper and pen.
-
-## HOW
-The game is played on a grid that's 3 squares by 3 squares. Then you can choose whether you are use 'X' or '0' First player who gets the 3 marks in a row (up, down, across, or diagonally) will be the winner of the game.
+* ***Play with 'X' or 'O'***
+* ***Either player or computer wins the game.***
+* ***Either player or computer Lose the game.***
+### RESEARCH
+***Features and Benefits of the Tic-Tac-Toe Game It's often used as a pedagogical tool to teach ideas like good sportsmanship and the branch of artificial intelligence that deals with game tree searching. On this space, developing a computer algorithm to play faultless tic-tac-toe or enumerating the 765 basically different positions (state space complexity) or the 26,830 possible games up to rotations and reflections (game tree complexity) is simple. Tic-tac-toe is a pointless game since it always ends in a draw if both players play optimally.***
+# Folder Structure
+|FOLDER|DESCRIPTION|
+|:-----|:----------|
+|`1_Requirements`|Documents detailing requirements|
+|`2 Architecture`|Structural and Behavioural UML|
+|`3_Implementation`|All the code is written here|
+|`4 TestPlanAndOutput`|Documents with test plans and outputs|
+|`5_Report`|Generated Report|
+|`6 ImagesandVideos`|All the images and program execution video|
+|`7_Other`|other information|
+# Learning Resources
+* Geeks for Geeks
+* Tutorial Point
+* W3 Schools
