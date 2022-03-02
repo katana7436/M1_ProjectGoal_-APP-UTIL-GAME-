@@ -3,7 +3,8 @@
 ## INTRODUCTION
 * ***This game is very popular and is fairly simple by itself. It is actually a two player game. In this game, there is a board with n x n squares. In our game, it is 3 x 3 squares.*** 
 # BADGES
-| ![code quality score](https://api.codiga.io/project/29985/score/svg) | ![code grade](https://api.codiga.io/project/29985/status/svg)
+![code quality score](https://api.codiga.io/project/29985/score/svg)
+![code grade](https://api.codiga.io/project/29985/status/svg)
 [![Code Quality - Static Code - Cppcheck](https://github.com/katana7436/M1_Tictactoe_Game/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/katana7436/M1_Tictactoe_Game/actions/workflows/cppcheck.yml)
 [![Git Inspector](https://github.com/katana7436/M1_Tictactoe_Game/actions/workflows/Git_inspector.yml/badge.svg)](https://github.com/katana7436/M1_Tictactoe_Game/actions/workflows/Git_inspector.yml)
 [![Unit Testing - Unity](https://github.com/katana7436/M1_Tictactoe_Game/actions/workflows/unity.yml/badge.svg)](https://github.com/katana7436/M1_Tictactoe_Game/actions/workflows/unity.yml)
