@@ -1,45 +1,77 @@
-# REQUIREMENTS
+# Requirements
+## Introduction
+Tic-tac-toe, also known as noughts and crosses, or Xs and Os/“X’y O’sies”, is a game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a diagonal, horizontal, or vertical row is the winner. It is a solved game with a forced draw assuming best play from both players. It is usually played on paper but as the technology evolved, here is a digital version of it.
+This topic was chosen because it gives me an opportunity to implement and understand multiple C programming concepts.
+## Research
+Tic-tac-toe Game Features and Benefits
+It is often used as a pedagogical tool for teaching the concepts of good sportsmanship and the branch of artificial intelligence that deals with the searching of game trees. It is straightforward to write a computer program to play tic-tac-toe perfectly or to enumerate the 765 essentially different positions (the state space complexity) or the 26,830 possible games up to rotations and reflections (the game tree complexity) on this space. If played optimally by both players, the game always ends in a draw, making tic-tac-toe a futile game.
 
-## INTRODUCTION
-* This game is very popular and is fairly simple by itself. It is actually a two player game. In this game, there is a board with n x n squares. In our game, it is 3 x 3 squares.
+The game can be generalized to an m,n,k-game in which two players alternate placing stones of their own color on an m×n board, with the goal of getting k of their own color in a row. Tic-tac-toe is the (3,3,3)-game.Harary's generalized tic-tac-toe is an even broader generalization of tic-tac-toe. It can also be generalized as a nd game. Tic-tac-toe is the game where n equals 3 and d equals 2.It can be generalised even further by playing on an arbitrary incidence structure, where rows are lines and cells are points.
 
-### FEATURES 
-* Play with 'X' or 'O'
-* Either player or computer wins the game.
-* Either player or computer Lose the game.
-### RESEARCH
-Features and Benefits of the Tic-Tac-Toe Game It's often used as a pedagogical tool to teach ideas like good sportsmanship and the branch of artificial intelligence that deals with game tree searching. On this space, developing a computer algorithm to play faultless tic-tac-toe or enumerating the 765 basically different positions (state space complexity) or the 26,830 possible games up to rotations and reflections (game tree complexity) is simple. Tic-tac-toe is a pointless game since it always ends in a draw if both players play optimally.
+## Benefits
+Tic-tac-toe Game offers a few benefits. Here are just a few of them:
 
-# SWOT ANALYSIS
-## STRENGTHS
-* The game can assist the player in predicting the outcome of another player's action.
-* It aids in the formulation of the strategy.
-* It aids in the development of logic and problem-solving abilities.
-## WEAKNESS
-* Connection lost
-## OPPORTUNITIES
-* To improve your computer gaming knowledge.
-## THREATS
-### VIRUS THREAT
-* Virus is nothing but a program which disrupts the normal functioning of your computer systems. Computers attached to internet are more prone to virus attacks and they can end up into crashing your whole hard disk, causing you considerable headache. 
-# 4W's and 1H
-* WHO   - This is a game anybody can play.
-* WHAT  - This is a purely leisure game. Because there are so many different outcomes in this game, businesses can utilise it to design strategies.
-* WHEN  - This game can be played if you're bored or want to learn more about the game's methods, consequences, and scenarios. game.
-* WHERE - A simple tic tac toe game is accessible on a number of websites. In addition, corporations and organisations use it.
-## 1H
-* HOW - Blocks your opponent from winning as you try to win.
-# DETAIL REQUIRMENTS
-## HIGH LEVEL REQUIRMENTS
-| HLR1 | Users can use a web browser to obtain the information |
---- | --- |
-HLR2 | From the landing page, the user should choose the game's difficulty level and begin playing|
-HLR3 | When a user moves, the game page allows them to move|
-HLR4 | The user can see the opponent's movements in real time on the game page|
-HLR5 | The user can pick up where they left off in a game that isn't yet finished|
-HLR6 | When one player gets three symbols in a row, the game should be over|
-HLR7 | After the game, the user sees the results|
-## LOW LEVEL REQUIRMENTS
-| LLR1 | Name of the player |
---- | --- |
-LLR2 | Players personal details like gender,contact number|
+## Good Sportsmanship
+Like any game, tic tac toe also teaches a person to accept the defeat as well as ackowledge the win.
+
+## Prepares for more complex games
+It prepares a person for more complex games because they have to think of multiple things at one time.
+
+## Developement of Coordination
+Tic-tac-toe helps develop coordination, fine motor skills and visual skills.
+
+## Mannerism
+It helps one to learn how to follow rules and take turns.
+
+## Concentration
+It can help to improve a person's concentration as well as strategic thinking
+
+## Explanation
+The game starts giving you three input options(1, 2, 3):
+1 means you play using 'X'.
+2 means you play using 'O'.
+3 means you exit the game.
+The game ends when:
+It is in a draw situation , i.e, a total of 9 moves have been completed and novody has won.
+You win.
+The computer wins.
+The game continues in the beginning if the check for draw is false.
+Then it checks if anyone has won yet.
+If not, then it again checks if it is a draw situation.
+
+# 4W's and 1'H
+## Who:
+Anyone can play this game.
+Also, businesses can use it.
+## What:
+This game is for recreational purposes.
+Businesses can also use is for development of strategies as there are many possible outcomes in this game.
+## When:
+This game can be played whenever you are feeling bored or want to figure out ways, outcomes and situations of this game.
+## Where:
+A variety of websites make a simple tic tac toe game available.
+Also used in businesses and organizations.
+## How:
+It can be implemented in a business strategy to help improve it. Business strategy is about moving swiftly and getting an advantageous position. In Tic-Tac-Toe, this is pretty straight forward: The first mover can choose the best position. In business, it is a bit more complicated. Even if business strategy is more complex, the principle is the same: Move swiftly when the time comes, go for an advantageous position.
+# Detail requirements
+## High Level Requirements:
+|ID |Description |
+|---|---|
+|HR01 |User shall be able to choose 'X' to play|
+|HR02 |User shall be able to choose 'O' to play|
+|HR03 |User shall be able to Exit the game|
+|HR04 |User shall lose|
+|HR05 |User shall win|
+|HR06 |User shall end up in a Draw situation|
+# Low level Requirements:
+|ID |Description |HLR ID |
+|---|---|---|
+|LR01 |If the user presses '1', he'll be play with 'X'|HR01 |
+|LR02 |If the user is playing with 'X', he'll get the first turn|HR01 |
+|LR03 |If the user presses '2', he'll be play with 'O'|HR02 |
+|LR04	 |If the user is playing with 'O', he'll get the second turn|HR02 |
+|LR05 |If the user presses '3', it'll exit the game|HR03 |
+|LR06 |If the computer gets 3 Xs or 3 Os in vertical,horizontal or diagonal row, User will lose |HR04 |
+|LR07 |If the user gets 3 Xs or 3 Os(as per his choice), in vertical,horizontal or diagonal row, he'll win.|HR05 |
+|LR08 |If the total number of moves, i.e., 9 moves have been completed and neithe the user nor the computer has won, it'll end up in a draw. |HR06 |
+## SWOT ANALYSIS![swot1](https://user-images.githubusercontent.com/94157594/142618767-dfc8280f-5cdc-4a4b-84a0-aef6c37b2eac.png)
